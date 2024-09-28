@@ -24,7 +24,7 @@ Restuarant Managment App, bulit with NestJs, Mongodb and Redis which includes:
 
 ```bash
 # confiure mongodb instance
-# mongodb in not running by docker container in this example so , local mongodb instance you should: 
+# mongodb in not running by docker container in this example so for local mongodb instance you should: 
 # - edit bindIp in `C:\Program Files\MongoDB\Server\6.0\bin\mongod.cfg` to '0.0.0.0' to allow external connections.
 
 
