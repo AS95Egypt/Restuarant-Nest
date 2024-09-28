@@ -29,7 +29,14 @@
 ## Project setup (using docker)
 
 ```bash
-$ npm install
+# change directory to project folder then first run this command to build the image
+$ docker build -t restaurantnestapp:1.0 .
+
+# list created images to get app image ID
+$ docker images
+
+# run container of the app using this image id
+$ docker run -d -p 3000:3000 --name restuarnat-nest-app image-ID-here
 ```
 
 ## Test Project APIs
