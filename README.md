@@ -14,7 +14,7 @@
 
 Restuarant Managment App, bulit with NestJs, Mongodb and Redis which includes:  
 
-- Endpoints for handling CRUD operations on (Items, Customers and Orders).
+- Endpoints for handling CRUD operations for (Items, Customers and Orders).
 - generation of daily sales report which we can query by date, and set the limit of items count in result for `most sold items`
 - Run and install the app using Docker and NPM.
 - Global error handling (Exception filter) and Input validation using Class validator.
