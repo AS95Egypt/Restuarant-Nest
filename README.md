@@ -23,6 +23,11 @@ Restuarant Managment App, bulit with NestJs, Mongodb and Redis which includes:
 ## Project setup (using docker)
 
 ```bash
+# confiure mongodb instance
+# mongodb in not running by docker container in this example so , local mongodb instance you should: 
+# - edit bindIp in `C:\Program Files\MongoDB\Server\6.0\bin\mongod.cfg` to '0.0.0.0' to allow external connections.
+
+
 # change directory to project folder then first run this command to build the image
 $ docker build -t restaurantnestapp:1.0 .
 
