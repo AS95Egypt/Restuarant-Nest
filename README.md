@@ -6,9 +6,9 @@
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
   <p align="center">Restuarant Managment App, bulit with NestJs, Mongodb and Redis,
-    - handel CRUD operations on (items, customers, orders).
-    - generate daily sales report which we can query by date, and set the limit of items count in result for `most sold items`.
-    - application can run using docker or npm.  
+    handel CRUD operations on (items, customers, orders),
+    generate daily sales report which we can query by date, and set the limit of items count in result for `most sold items`, 
+    application can run using docker or npm.  
   </p>  
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
