@@ -1,4 +1,4 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, ParseIntPipe, Query } from '@nestjs/common';
 
 import { ReportsService } from './reports.service';
 
@@ -9,7 +9,7 @@ export class ReportsController {
   @Get('daily-sales-report')
   async getDailyReport(
     @Query('search_date') searchDate: Date,
-    @Query('limit') limit: number, // items to be returned
+    @Query('limit', ParseIntPipe) limit: number, // items to be returned
   ) {
     const reportData = await this.orderDataService.getDailyReportData(
       searchDate,

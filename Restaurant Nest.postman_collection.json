@@ -1,0 +1,641 @@
+{
+	"info": {
+		"_postman_id": "c176bb01-5bd6-411e-92f0-97b23eebb954",
+		"name": "Restaurant Nest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28882148",
+		"_collection_link": "https://crystalpay-team.postman.co/workspace/RMS_APIs~6de8c41a-494b-4a7c-b784-c4bfb6da9bdf/collection/28882148-c176bb01-5bd6-411e-92f0-97b23eebb954?action=share&source=collection_link&creator=28882148"
+	},
+	"item": [
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "Get All Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/items",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_name\": \"برجر\",\r\n    \"category\": \"FOOD\",\r\n    \"sell_unit\": \"PIECE\",\r\n    \"price\": 90,\r\n    \"cost\": 70,\r\n    \"quantity\": 50,\r\n    \"is_active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/items",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one item",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_name\": \"شاورما\",\r\n    \"category\": \"FOOD\",\r\n    \"sell_unit\": \"PIECE\",\r\n    \"price\": 63,\r\n    \"cost\": 50,\r\n    \"quantity\": 90,\r\n    \"is_active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/items/66f7e6226491d63c8744a3da",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"items",
+								"66f7e6226491d63c8744a3da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_name\": \"شاورما\",\r\n    \"category\": \"FOOD\",\r\n    \"sell_unit\": \"PIECE\",\r\n    \"price\": 63,\r\n    \"cost\": 50,\r\n    \"quantity\": 90,\r\n    \"is_active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/items/66f7e6d0d450bf3c2d12a958",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"items",
+								"66f7e6d0d450bf3c2d12a958"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/items/66f7e6226491d63c8744a3da",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"items",
+								"66f7e6226491d63c8744a3da"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_name\": \"ahmed\",\r\n    \"email\": \"ahmed1@gamil.com\",\r\n    \"phone\": \"01003849389\",    \r\n    \"address\": \"cairo\",\r\n    \"balance\": 100,\r\n    \"is_active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one customer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_name\": \"شاورما\",\r\n    \"category\": \"FOOD\",\r\n    \"sell_unit\": \"PIECE\",\r\n    \"price\": 63,\r\n    \"cost\": 50,\r\n    \"quantity\": 90,\r\n    \"is_active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/customers/66f7f45e1c433f69ff7f2c9f",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"66f7f45e1c433f69ff7f2c9f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_name\": \"شاورما\",\r\n    \"category\": \"FOOD\",\r\n    \"sell_unit\": \"PIECE\",\r\n    \"price\": 63,\r\n    \"cost\": 50,\r\n    \"quantity\": 90,\r\n    \"is_active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/customers/66f7e6d0d450bf3c2d12a958",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"66f7e6d0d450bf3c2d12a958"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/customers/66f7f45e1c433f69ff7f2c9f",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"66f7f45e1c433f69ff7f2c9f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Order Items",
+					"item": [
+						{
+							"name": "Add Item to order",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"item_id\": \"66f81270e809977304af492c\",\r\n    \"price\": 90,\r\n    \"quantity\": 1,\r\n    \"total\": 90\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://0.0.0.0:3000/api/v1/orders/66f811f0e809977304af491d/items",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"66f811f0e809977304af491d",
+										"items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Item in order",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"price\": 85,\r\n    \"quantity\": 1,\r\n    \"total\": 85\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://0.0.0.0:3000/api/v1/orders/66f811f0e809977304af491c/items/66f8112de809977304af4913",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"66f811f0e809977304af491c",
+										"items",
+										"66f8112de809977304af4913"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Item from order",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://0.0.0.0:3000/api/v1/orders/66f811f0e809977304af491d/items/66f81270e809977304af492c",
+									"protocol": "http",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"66f811f0e809977304af491d",
+										"items",
+										"66f81270e809977304af492c"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get All Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"customer_id\": \"66f7f907be8e7cbda30a170e\",\r\n    \"payment_method\": \"CASH\",\r\n    \"order_status\": \"OPEN\",\r\n    \"items\": [\r\n        {\r\n            \"item_id\": \"66f7f7130800720bd69302d3\",\r\n            \"price\": 60,\r\n            \"quantity\": 1,\r\n            \"total\": 60\r\n        }\r\n    ],\r\n    \"total_amount\": 60,\r\n    \"paid_amount\": 0,\r\n    \"remaining_amount\": 60,\r\n    \"is_paid\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_name\": \"شاورما\",\r\n    \"category\": \"FOOD\",\r\n    \"sell_unit\": \"PIECE\",\r\n    \"price\": 63,\r\n    \"cost\": 50,\r\n    \"quantity\": 90,\r\n    \"is_active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/orders/66f811f0e809977304af491d",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"66f811f0e809977304af491d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"customer_id\": \"66f7f907be8e7cbda30a170e\",\r\n    \"payment_method\": \"CASH\",\r\n    \"order_status\": \"COMPLETED\",\r\n    \"items\": [\r\n        {\r\n            \"item_id\": \"66f7f7130800720bd69302d3\",\r\n            \"price\": 60,\r\n            \"quantity\": 1,\r\n            \"total\": 60\r\n        },\r\n        {\r\n            \"item_id\": \"66f8112de809977304af4912\",\r\n            \"price\": 40,\r\n            \"quantity\": 2,\r\n            \"total\": 80\r\n        }\r\n    ],\r\n    \"total_amount\": 140,\r\n    \"paid_amount\": 140,\r\n    \"remaining_amount\": 0,\r\n    \"is_paid\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/orders/66f811f0e809977304af491d",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"66f811f0e809977304af491d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/orders/66f8013cc3d2f1d88454ed13",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"66f8013cc3d2f1d88454ed13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "Get Daily sales Report",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_name\": \"شاورما\",\r\n    \"category\": \"FOOD\",\r\n    \"sell_unit\": \"PIECE\",\r\n    \"price\": 63,\r\n    \"cost\": 50,\r\n    \"quantity\": 90,\r\n    \"is_active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:3000/api/v1/reports/daily-sales-report/?search_date=2024-09-28T14:25:52.969Z&limit=5",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"daily-sales-report",
+								""
+							],
+							"query": [
+								{
+									"key": "search_date",
+									"value": "2024-09-28T14:25:52.969Z"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
