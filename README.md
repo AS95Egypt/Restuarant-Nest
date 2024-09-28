@@ -26,10 +26,16 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Project setup
+## Project setup (using docker)
 
 ```bash
 $ npm install
+```
+
+## Test Project APIs
+
+```bash
+use Restaurant Nest.postman_collection.json located in the root of this repo
 ```
 
 ## Compile and run the project
