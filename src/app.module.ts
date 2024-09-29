@@ -1,4 +1,6 @@
 import { Module } from '@nestjs/common';
+import { CacheModule } from '@nestjs/cache-manager';
+import { redisStore } from 'cache-manager-redis-yet';
 // app modules
 import { ItemsModule } from './entities/items/items.module';
 import { OrdersModule } from './entities/orders/orders.module';
@@ -12,6 +14,10 @@ import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    CacheModule.register({
+      isGlobal: true,
+      store: redisStore,
+    }),
     // load config from .env file
     ConfigModule.forRoot({
       isGlobal: true,

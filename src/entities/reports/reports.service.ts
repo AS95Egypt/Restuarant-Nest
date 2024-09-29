@@ -1,12 +1,16 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Order } from '../orders/order.schema';
 import { DailyReportDto } from '../../utils/dto/daily-report.dto';
+import { Cache } from 'cache-manager';
 
 @Injectable()
 export class ReportsService {
-  constructor(@InjectModel(Order.name) private orderModel: Model<Order>) {}
+  constructor(
+    @InjectModel(Order.name) private orderModel: Model<Order>,
+    @Inject('CACHE_MANAGER') private chacheManager: Cache,
+  ) {}
 
   async getDailyReportData(
     searchDate: Date,
@@ -18,8 +22,13 @@ export class ReportsService {
     const endOfDay = new Date(searchDate);
     endOfDay.setUTCHours(23, 59, 59, 999);
 
-    console.log('startOfDay', startOfDay);
-    console.log('endOfDay', endOfDay);
+    const cahcedReportData = await this.chacheManager.get(
+      'daily_report:' + startOfDay,
+    );
+    if (cahcedReportData) {
+      console.log('get from cache');
+      return JSON.parse(cahcedReportData as string);
+    }
 
     // get totals for the day
     const dayTotals = await this.orderModel
@@ -104,6 +113,14 @@ export class ReportsService {
       orders_count_per_day: dayTotals[0].orders_count_per_day,
       most_sold_items: mostSoldItems,
     };
+
+    console.log('get from db');
+    // cache report data
+    await this.chacheManager.set(
+      'daily_report:' + startOfDay,
+      JSON.stringify(reportData),
+      60 * 60 * 24 * 1000,
+    ); // cache for 24 hours
 
     return reportData;
   }
